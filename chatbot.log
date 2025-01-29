@@ -1,0 +1,13 @@
+2025-01-06 12:54:43,379 - ERROR - Error loading embedded documents: 'DataFrame' object has no attribute 'ada_embedding'
+2025-01-06 12:54:43,381 - INFO - Starting with an empty dataframe due to loading error
+2025-01-06 12:57:25,387 - INFO - Human Question: Tell me about ABC Builders' projects.
+2025-01-06 12:57:26,411 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-06 12:57:27,104 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-30 01:44:35,798 - ERROR - Error loading embedded documents: 'DataFrame' object has no attribute 'ada_embedding'
+2025-01-30 01:44:35,800 - INFO - Starting with an empty dataframe due to loading error
+2025-01-30 01:56:24,630 - ERROR - Error loading embedded documents: 'DataFrame' object has no attribute 'ada_embedding'
+2025-01-30 01:56:24,634 - INFO - Starting with an empty dataframe due to loading error
+2025-01-30 01:57:39,950 - ERROR - Error loading embedded documents: 'DataFrame' object has no attribute 'ada_embedding'
+2025-01-30 01:57:39,953 - INFO - Starting with an empty dataframe due to loading error
+2025-01-30 01:59:30,256 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-01-30 02:24:15,148 - INFO - No existing embedded documents found, starting with an empty dataframe
