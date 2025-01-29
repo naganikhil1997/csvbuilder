@@ -42,7 +42,7 @@ def safe_eval(x):
         return []
 
 try:
-    df = pd.read_csv('csv converter.csv')
+    df = pd.read_csv('csvconverter.csv')
     df['ada_embedding'] = df.ada_embedding.apply(safe_eval).apply(np.array)
     logger.info("Loaded existing embedded documents")
 except FileNotFoundError:
@@ -79,7 +79,7 @@ async def upload_text(text_upload: TextUpload):
     global df
     df = pd.concat([df, new_row], ignore_index=True)
     
-    df.to_csv('csv converter.csv', index=False)
+    df.to_csv('csvconverter.csv', index=False)
     
     return {"message": "Text uploaded and embedded successfully"}
 
@@ -97,12 +97,12 @@ async def generate_response(message: str):
     print(f"Retrieved Context: {context}")
     
     system_message = f"""
-    You are an AI assistant for a real estate projects content. Your role is to assist users/ coustomers by providing accurate information related to builders and their projects, and related details stored in the embedded content.
-
-    Here are some key points about the builder projects:
-    - The content contains details of various construction projects, including residential, commercial, and industrial buildings.
-    - Each entry includes the builder's name, project description, location, project status, and other relevant details.
-    - Users can inquire about specific projects, builder expertise, ongoing developments, and project completion timelines.
+    You are an AI assistant for a food application that provides detailed recipe information based on ingredients available in a warehouse. Your role is to assist users by suggesting recipes using the ingredients stored in a CSV file.
+ Here are some key points about the food application:
+- The CSV file contains details of various ingredients available in the warehouse, including their names, quantities, and categories.
+- Users can inquire about recipes that can be made using available ingredients, required quantities, cooking methods, and estimated nutritional values.
+- Each recipe suggestion includes the dish name, ingredients list, preparation instructions, estimated cost, calorie count, and serving size.
+- If an ingredient is missing, you can suggest alternative ingredients or provide recommendations for purchasing.
 
     Retrieved Context: {context}
     Human's Chat History (previous questions):
